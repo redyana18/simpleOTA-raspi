@@ -3,22 +3,12 @@ name: LED Blink
 on:
   push:
     branches:
-      - master
+      - main
+
 jobs:
-  test:
-        name: Run tests
-        runs-on: ubuntu-latest
-        strategy:
-          matrix:
-            python-version: ["3"]
-  
-        steps:
-          - uses: actions/checkout@v3
-          - name: Python Linter
-            uses: sunnysid3up/python-linter@master
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -38,4 +28,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/arm/v7
         push: true
-        tags: createredyana/raspi-ota:latest
+        tags: putraarengga/raspi-ci-cd:latest
