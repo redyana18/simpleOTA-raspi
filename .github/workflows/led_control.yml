@@ -38,4 +38,4 @@ jobs:
         file: ./Dockerfile
         platforms: linux/arm/v7
         push: true
-        tags: putraarengga/ci:latest
+        tags: createredyana/raspi-ota:latest
